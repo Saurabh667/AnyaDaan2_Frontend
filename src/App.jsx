@@ -7,6 +7,7 @@ import Login from "./components/Auth/Login";
 import AuthProvider from "./AuthProvider";
 import About from "./components/Pages/About";
 import Contribute from "./components/Pages/Contribute";
+import ThankYou from "./components/Pages/ThankYou";
 import { useContext } from "react";
 import './App.css'
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/contribute" element={<Contribute/>}/>
+          <Route path="/thankyou" element={<ThankYou/>}/>
           
         </Routes>
       

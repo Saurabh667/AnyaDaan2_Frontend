@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Contribute.css";
 import Footer from "../Footer";
-
+import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios";
 
 const Contribute = () => {
@@ -12,9 +12,12 @@ const Contribute = () => {
   const [description,setDescription]=useState('');
   const [message,setMessage]=useState('');
   const [image, setImage] = useState(null);
+  const [loading,setLoading]=useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit=async (e)=>{
     e.preventDefault()
+    setLoading(true)
     const contributionData={
         name,email,contributionType,imageName,description,message
         };
@@ -27,9 +30,14 @@ const Contribute = () => {
                     );
     console.log(response,"this data is send to backend")
     console.log(response.data)
+    navigate('/thankyou')
+    
   }
   catch(error){
     console.error("error are",error.response?.data);
+  }
+  finally{
+    setLoading(false)
   }
   
   };
@@ -39,7 +47,6 @@ const Contribute = () => {
         <form onSubmit={handleSubmit} className="contributeForm form">
       <div className="contribute-card">
         <h2>Contribute Now</h2>
-
         <div className="form-group">
           <label>Full Name</label>
           <input type="text" placeholder="Enter your name" onChange={(e)=> setName(e.target.value)}/>
@@ -90,8 +97,8 @@ const Contribute = () => {
           <label>Message</label>
           <textarea placeholder="Write a short message..." onChange={(e)=>setMessage(e.target.value)}></textarea>
         </div>
-
-        <button className="submit-btn" type="submit" >Submit Contribution</button>
+              {loading?(<button className="submit-btn" type="submit" disabled={true} >Please Wait....</button>):(<button className="submit-btn" type="submit" >Submit Contribution</button>)}
+        
       </div>
       </form>
     </div>
