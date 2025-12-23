@@ -1,0 +1,55 @@
+import React from 'react'
+import './Header.css'
+import { Link } from "react-router-dom";
+import {AuthContext} from '../AuthProvider';
+import { useContext } from 'react';
+import logo from '../assets/anyadaanlogo.jpg'
+
+const Header = () => {
+  const {isLoggedIn,setIsLoggedIn,user}=useContext(AuthContext);
+
+  const handleLogout=()=>{
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
+        localStorage.removeItem('username');
+        setIsLoggedIn(false);
+        // navigate('/login');
+        console.log('logged out successfully')
+    }
+  return (
+    <>
+    <div className="headerBox">
+      <div className="logoDiv">
+        <img src={logo} alt="" /><Link to='/'>AnyaDaan</Link>
+      </div>
+      <div className="optionsDiv">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/contribute">Contribute</a></li>
+          <li><a href="">LeadersBoard</a></li>
+          <li><a href="">DashBoard</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+      <div className="auth-buttons">
+        {
+          isLoggedIn ? (<button onClick={handleLogout} className="btn logoutBtn">Logout</button>):(
+        <>
+        <Link to="/login" className="btn btn-login">
+        Login
+      </Link>
+
+      <Link to="/signup" className="btn btn-signup">
+        Signup
+      </Link>
+      </>
+      )
+        }
+      
+    </div>
+    </div>
+    </>
+  )
+}
+
+export default Header

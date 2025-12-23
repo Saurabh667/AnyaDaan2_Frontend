@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ecfdf5, #bbf7d0);
+}
+
+.Scard {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  
+}
+
+.title {
+  text-align: center;
+  color: #15803d;
+  margin-bottom: 25px;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 360px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25);
+}
+
+.role {
+  display: flex;
+  gap: 25px;
+  margin-top: 5px;
+}
+
+.role label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.role input {
+  margin-right: 6px;
+  accent-color: #16a34a;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #16a34a;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #15803d;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #15803d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+small{
+  color: red;
+}
+
+
+@media (max-width: 768px){
+    .page{
+      min-height: 92vh;
+      
+    }
+    .Scard{
+      margin: 0px 5vw;
+    }
+}
+
+
+

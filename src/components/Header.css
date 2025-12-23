@@ -1,0 +1,111 @@
+.headerBox{
+    height: 75px;
+    width: 99vw;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 3vw;
+}
+.logoDiv{
+    padding: 7.5px 0px;
+    width: 20vw;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    color: rgb(84, 251, 123);
+
+}
+.logoDiv img{
+    height: 60px;
+    width: 50px;
+    margin-right: 1vw;
+    border-radius: 100%;
+}
+.optionsDiv{
+    padding: 7.5px 0px;
+    
+    width: 50vw;
+}
+.optionsDiv ul{
+    padding: 20px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.optionsDiv a{
+    text-decoration: none;
+    font-family:serif;
+    font-weight: bolder;
+    font-size: large;
+    color: rgb(44, 41, 41);
+  
+}
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+height: 44px;
+  
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-login {
+  border: 1px solid #16a34a;
+  color: #16a34a;
+  background-color: transparent;
+}
+
+.btn-login:hover {
+  background-color: #dcfce7;
+}
+
+.btn-signup {
+  background-color: #16a34a;
+  color: white;
+  border: 1px solid #16a34a;
+}
+
+.btn-signup:hover {
+  background-color: #15803d;
+}
+
+.logoutBtn{
+  transform: translateX(-50%);
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.logoutBtn:hover {
+  background-color: #e64446;
+  transform: translateX(-50%) scale(1.02);
+}
+
+.logoutBtn:active {
+  background-color: #cc393b;
+  transform: translateX(-50%) scale(0.98);
+}
+
+@media (max-width: 768px){
+    .optionsDiv{
+        display: none;
+    }
+    .logoDiv a{
+      text-decoration: none;
+      color: #16a34a;
+      font-weight: bolder;
+    }
+}
+
+
