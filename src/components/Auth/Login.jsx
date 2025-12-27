@@ -50,7 +50,18 @@ const Login = () => {
     //     setMessage(`❌ ${errData.detail || "Invalid credentials"}`);
     //   }
     } catch (error) {
+      const backendMessage = error?.response?.data?.detail;
+
+    if (backendMessage === "No active account found or incorrect password.") {
+      // alert("No account exists. Please sign up.");
+      setMessage("No account exists. Please sign up.")
+    } else if (backendMessage === "Invalid credentials") {
+      // alert("Incorrect email or password.");
+      setMessage("Incorrect email or password.")
+    } else {
+      alert("Login failed. Please try again.");
       setMessage("⚠️ Network error. Please try again.");
+    }
       console.error(error.response?.data || error, 'invalid credentials');
       setErrors(error.response?.data || { detail: 'Login failed' });
     }

@@ -103,7 +103,7 @@
   border: none;
   padding: 14px 26px;
   border-radius: 999px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #ffffff;
   cursor: pointer;
@@ -126,6 +126,11 @@
   font-weight: 600;
   color: #ffffff;
   cursor: pointer;
+  
+}
+.btn-secondary a{
+  text-decoration: none;
+  color: white;
 }
 
 .btn-secondary:hover {
@@ -411,6 +416,7 @@
 /* Image */
 .cta-image img {
   width: 100%;
+  max-height: 500px;
   border-radius: 20px;
   box-shadow:
     0 25px 60px rgba(0, 0, 0, 0.65),
@@ -546,6 +552,7 @@
 }
 
 .btn.light {
+
   background: #ffffff;
   color: #16a34a;
   border: none;
@@ -560,6 +567,7 @@
   background: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
+  
 }
 
 .btn.outline-light:hover {
@@ -568,3 +576,182 @@
 }
 
 
+/* transition effects */
+
+/* ================= GLOBAL SMOOTHNESS ================= */
+* {
+  transition: background-color 0.35s ease,
+              color 0.35s ease,
+              transform 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+/* ================= HERO EFFECTS ================= */
+.hero {
+  overflow: hidden;
+}
+
+.hero-overlay {
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+.hero-title {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.hero-text {
+  animation: fadeUp 1.1s ease forwards;
+}
+
+.search-wrapper {
+  animation: fadeUp 1.3s ease forwards;
+}
+
+.hero-buttons {
+  animation: fadeUp 1.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= SEARCH BOX EFFECT ================= */
+.search-box {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.search-box:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 15px 45px rgba(34, 197, 94, 0.35);
+}
+
+/* ================= BUTTON MICRO INTERACTIONS ================= */
+.btn-primary,
+.btn-secondary,
+.btn,
+.search-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Ripple glow */
+.btn-primary::after,
+.btn.secondary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.35), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn-primary:hover::after,
+.btn.secondary:hover::after {
+  opacity: 1;
+}
+
+/* ================= CARD ENHANCEMENTS ================= */
+.card,
+.impact-card {
+  position: relative;
+}
+
+.card::before,
+.impact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(34, 197, 94, 0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before,
+.impact-card:hover::before {
+  opacity: 1;
+}
+
+/* ================= ICON FLOAT EFFECT ================= */
+.icon {
+  transition: transform 0.4s ease;
+}
+
+.card:hover .icon,
+.impact-card:hover .icon {
+  transform: translateY(-6px) scale(1.08);
+}
+
+/* ================= CTA IMAGE PARALLAX ================= */
+.cta-image img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.cta-image img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.75);
+}
+
+/* ================= MISSION SECTION ================= */
+.mission {
+  background-size: 200% 200%;
+  animation: gradientFlow 10s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ================= SCROLL FADE SUPPORT ================= */
+.how-it-works,
+.impact,
+.cta,
+.mission {
+  animation: sectionFade 0.9s ease both;
+}
+
+@keyframes sectionFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

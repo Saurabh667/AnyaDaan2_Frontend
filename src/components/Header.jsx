@@ -26,8 +26,8 @@ const Header = () => {
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/contribute">Contribute</a></li>
-          <li><a href="">LeadersBoard</a></li>
-          <li><a href="">DashBoard</a></li>
+          <li><a href="/contributionBoard">LeadersBoard</a></li>
+          <li><a href="/recentDonations">Donations</a></li>
           <li><a href="/about">About</a></li>
         </ul>
       </div>

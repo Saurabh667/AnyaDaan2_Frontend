@@ -8,6 +8,9 @@ import AuthProvider from "./AuthProvider";
 import About from "./components/Pages/About";
 import Contribute from "./components/Pages/Contribute";
 import ThankYou from "./components/Pages/ThankYou";
+import RecentDonations from "./components/Pages/RecentDonations";
+import ContributionBoard from "./components/Pages/ContributionBoard";
+import AdminDashboard from "./components/Admin/AdminDashboard";
 import { useContext } from "react";
 import './App.css'
 
@@ -25,6 +28,9 @@ function App() {
           <Route path="/about" element={<About/>}/>
           <Route path="/contribute" element={<Contribute/>}/>
           <Route path="/thankyou" element={<ThankYou/>}/>
+          <Route path="/recentDonations" element={<RecentDonations/>}/>
+          <Route path="/contributionBoard" element={<ContributionBoard/>}/>
+          <Route path="/admin" element={<AdminDashboard/>}/>
           
         </Routes>
       

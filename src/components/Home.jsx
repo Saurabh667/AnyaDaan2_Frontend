@@ -36,8 +36,8 @@ const Home = () => {
 
         {/* Buttons */}
         <div className="hero-buttons">
-          <button className="btn-primary"><Link to='/contribute'>Contribute Now</Link></button>
-          <button className="btn-secondary">Learn More</button>
+          <Link to='/contribute'><button className="btn-primary">Contribute Now</button></Link>
+          <Link to='/recentDonations'><button className="btn-secondary">Recieve</button></Link>
         </div>
       </div>
     </div>
@@ -101,7 +101,7 @@ const Home = () => {
           <div className="icon green">
             🍴
           </div>
-          <h3 className="number">125,000+</h3>
+          <h3 className="number">1250+</h3>
           <p className="label">Meals Served</p>
         </div>
 
@@ -109,7 +109,7 @@ const Home = () => {
           <div className="icon blue">
             👥
           </div>
-          <h3 className="number">8,500+</h3>
+          <h3 className="number">85+</h3>
           <p className="label">Volunteers</p>
         </div>
 
@@ -117,7 +117,7 @@ const Home = () => {
           <div className="icon yellow">
             📍
           </div>
-          <h3 className="number">45+</h3>
+          <h3 className="number">5+</h3>
           <p className="label">Cities Covered</p>
         </div>
 
@@ -125,7 +125,7 @@ const Home = () => {
           <div className="icon red">
             🤝
           </div>
-          <h3 className="number">320+</h3>
+          <h3 className="number">20+</h3>
           <p className="label">NGOs Partnered</p>
         </div>
       </div>
@@ -155,7 +155,7 @@ const Home = () => {
 
           <div className="cta-buttons">
             <button className="btn primary"><Link to='/contribute' onClick={() => window.scrollTo(0, 0)}>Donate Food</Link></button>
-            <button className="btn outline">Become a Volunteer</button>
+            <button className="btn outline">Enquire</button>
           </div>
         </div>
       </div>
@@ -184,7 +184,7 @@ Through technology, compassion, and collaboration, we aim to reduce food waste a
           </p>
 
           <div className="cta-buttons">
-            <button className="btn primary">Learn More</button>
+            <Link to='/about'><button className="btn primary">Learn More</button></Link>
             {/* <button className="btn outline">Become a Volunteer</button> */}
           </div>
         </div>
@@ -204,9 +204,9 @@ Through technology, compassion, and collaboration, we aim to reduce food waste a
 
         <div className="mission-buttons">
           {/* <button className="btn light" >Sign Up Now</button> */}
-          <Link to="/signup" className='btn light'>SignUp Now</Link>
+          <Link to="/signup" className='btn light'>SignUp</Link>
 
-          <button className="btn outline-light">Donate Today</button>
+          <button className="btn outline-light"><Link to='/contribute'>Donate Today</Link></button>
         </div>
       </section>
 

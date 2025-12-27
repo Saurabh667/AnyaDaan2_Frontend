@@ -23,7 +23,8 @@ const Footer = () => {
               <li><Link to='/' onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
               <li><Link to='/about' onClick={() => window.scrollTo(0, 0)}>About</Link></li>
               <li><Link to='/contribute' onClick={() => window.scrollTo(0, 0)}>Contribute</Link></li>
-              <li><Link to='/' onClick={() => window.scrollTo(0, 0)}>Leadersboard</Link></li>
+              <li><Link to='/recentDonations' onClick={() => window.scrollTo(0, 0)}>Donations</Link></li>
+              <li><Link to='/contributionBoard' onClick={() => window.scrollTo(0, 0)}>LeadersBoard</Link></li>
               
               <li>Contact</li>
             </ul>
