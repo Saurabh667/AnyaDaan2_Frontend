@@ -1,4 +1,4 @@
-/* Page Wrapper */
+
 .contribute-wrapper {
   min-height: 100vh;
   background: linear-gradient(180deg, #0f172a, #020617);
@@ -7,8 +7,6 @@
   justify-content: center;
   padding: 40px 15px;
 }
-
-/* Card */
 .contribute-card {
   width: 100%;
   max-width: 750px;
@@ -18,7 +16,6 @@
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
 }
 
-/* Title */
 .contribute-card h2 {
   text-align: center;
   font-size: 2.3rem;
@@ -26,7 +23,6 @@
   color: #ffffff;
 }
 
-/* Form Group */
 .form-group {
   margin-bottom: 22px;
 }
@@ -38,7 +34,6 @@
   color: #e5e7eb;
 }
 
-/* Inputs */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -61,8 +56,6 @@
 .form-group textarea::placeholder {
   color: #9ca3af;
 }
-
-/* Upload */
 .upload-box {
   display: flex;
   align-items: center;
@@ -92,7 +85,6 @@
   color: #a7f3d0;
 }
 
-/* Submit Button */
 .submit-btn {
   width: 100%;
   margin-top: 20px;
@@ -112,7 +104,6 @@
   box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .contribute-card {
     padding: 35px 25px;
@@ -125,7 +116,6 @@
     width: 350px;
 }
 }
-
 
 
 .contributeForm{

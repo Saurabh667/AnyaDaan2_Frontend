@@ -7,7 +7,7 @@ const Footer = () => {
     <>
     <footer className="footer">
         <div className="footer-content">
-          {/* Brand */}
+          
           <div className="footer-col">
             <h3>AnyaDaan</h3>
             <p>
@@ -16,7 +16,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Links */}
+          
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>

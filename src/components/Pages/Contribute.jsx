@@ -67,8 +67,6 @@ const Contribute = () => {
             <option>Volunteer</option>
           </select>
         </div>
-
-        {/* Image Upload */}
         <div className="form-group">
           <label>Upload Image</label>
 

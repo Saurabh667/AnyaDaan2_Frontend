@@ -13,10 +13,10 @@ const Home = () => {
         backgroundImage:{bg},
       }}
     >
-      {/* Overlay */}
+      
       <div className="hero-overlay" ></div>
 
-      {/* Content */}
+      
       <div className="hero-content">
         <h1 className="hero-title">
           Together, Let’s <span>End Food Waste</span>
@@ -27,14 +27,13 @@ const Home = () => {
           difference.
         </p>
 
-        {/* Search */}
+        
         <div className="search-wrapper">
           <div className="search-box">
             
           </div>
         </div>
 
-        {/* Buttons */}
         <div className="hero-buttons">
           <Link to='/contribute'><button className="btn-primary">Contribute Now</button></Link>
           <Link to='/recentDonations'><button className="btn-secondary">Recieve</button></Link>
@@ -133,15 +132,13 @@ const Home = () => {
 
     <section className="cta">
       <div className="cta-container">
-        {/* Image */}
+        
         <div className="cta-image">
           <img
             src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=80"
             alt="Food donation"
           />
         </div>
-
-        {/* Content */}
         <div className="cta-content">
           <h2>
             Be the Change, <span>Contribute Today</span>
@@ -163,7 +160,6 @@ const Home = () => {
 
         <section className="cta">
       <div className="cta-container">
-        {/* Image */}
         <div className="cta-image">
           <img
             src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c"
@@ -171,7 +167,6 @@ const Home = () => {
           />
         </div>
 
-        {/* Content */}
         <div className="cta-content">
           <h2>
             Our<span> Mission</span>
@@ -185,13 +180,11 @@ Through technology, compassion, and collaboration, we aim to reduce food waste a
 
           <div className="cta-buttons">
             <Link to='/about'><button className="btn primary">Learn More</button></Link>
-            {/* <button className="btn outline">Become a Volunteer</button> */}
           </div>
         </div>
       </div>
     </section>
 
-    {/* CTA SECTION */}
       <section className="mission">
         <h1>
           Join Our Mission to <span>End Food Waste</span>

@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
     <div className="about-page">
-      {/* Top Green Section */}
+      
       <div className="about-hero">
         <h1>About AnyaDaan</h1>
         <p>
@@ -17,17 +17,14 @@ const About = () => {
         </p>
       </div>
 
-      {/* Dark Section */}
       <div className="about-content">
         <div className="about-wrapper">
-          {/* Left Side */}
           <div className="about-left">
             <div className="about-icon">
                 <img src={logo} alt="" />
             </div>
           </div>
 
-          {/* Right Side */}
           <div className="about-right">
             <h2>Who We Are</h2>
             <p>
@@ -83,7 +80,7 @@ const About = () => {
       <h2 className="team-title">Meet the Team</h2>
 
       <div className="team-cards">
-        {/* Member 1 */}
+        
         <div className="team-card">
           <img
             src={myimage}

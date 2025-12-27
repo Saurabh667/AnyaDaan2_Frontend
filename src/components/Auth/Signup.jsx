@@ -65,7 +65,6 @@ export default function Signup() {
             />
           </div>
 
-          {/* Role */}
           <div className="field">
             <label>Are you a donor or receiver?</label>
             <div className="role">
@@ -94,7 +93,6 @@ export default function Signup() {
             <small>{errors.role && <div> Please select a role</div>}</small>
           </div>
 
-          {/* Names */}
           <div className="row">
             <div className="field">
               <label>First Name</label>
@@ -119,7 +117,6 @@ export default function Signup() {
             </div>
           </div>
 
-          {/* Phone */}
           <div className="field">
             <label>Phone Number</label>
             <input
@@ -131,7 +128,6 @@ export default function Signup() {
             />
           </div>
 
-          {/* Email */}
           <div className="field">
             <label>Email Address</label>
             <input
@@ -145,7 +141,6 @@ export default function Signup() {
           </div>
 
 
-          {/* Password */}
           <div className="field">
             <label>Password</label>
             <input

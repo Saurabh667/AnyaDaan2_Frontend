@@ -1,7 +1,7 @@
 *{
   scroll-behavior: smooth;
 }
-/* FOOTER */
+
 .footer {
   background: radial-gradient(
     circle at top,
@@ -96,7 +96,7 @@
   font-weight: 600;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .footer-content {
     grid-template-columns: 1fr;

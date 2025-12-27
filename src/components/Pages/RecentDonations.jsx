@@ -59,7 +59,7 @@ const RecentDonations = () => {
       return;
     }
 
-    setAcceptingId(id); // open form for this donation
+    setAcceptingId(id); 
   };
   const handleAcceptSubmit = (e, id) => {
     e.preventDefault();
