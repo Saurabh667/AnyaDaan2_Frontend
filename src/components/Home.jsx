@@ -52,28 +52,26 @@ const Home = () => {
       <div className="cards">
         <div className="card">
           <div className="icon green">🍴</div>
-          <h3>Collect Surplus Food</h3>
+          <h3> Donation Request</h3>
           <p>
-            We collaborate with restaurants, events, and individuals to collect
-            surplus food safely.
+            We collaborate with restaurants, events, and individuals to donate 
+            their surplus food.
           </p>
         </div>
 
         <div className="card">
           <div className="icon blue">👥</div>
-          <h3>Connect with NGOs</h3>
+          <h3>Notification to NGOs</h3>
           <p>
-            Our network of verified NGOs helps ensure the food reaches people in
-            need quickly.
+            Your Donation Deatils are send to verified NGOs through Mails.
           </p>
         </div>
 
         <div className="card">
           <div className="icon yellow">🚚</div>
-          <h3>Deliver with Care</h3>
+          <h3>Response By NGOs</h3>
           <p>
-            Food is transported in hygienic conditions by volunteers and
-            delivery partners.
+            NGOs give response to collect Food by Accepting the donation request on our Website.
           </p>
         </div>
 
@@ -152,7 +150,7 @@ const Home = () => {
 
           <div className="cta-buttons">
             <button className="btn primary"><Link to='/contribute' onClick={() => window.scrollTo(0, 0)}>Donate Food</Link></button>
-            <button className="btn outline">Enquire</button>
+            <button className="btn outline"><Link to="/contributionBoard" onClick={() => window.scrollTo(0, 0)}>Top Donor's</Link></button>
           </div>
         </div>
       </div>
@@ -174,12 +172,11 @@ const Home = () => {
 
           <p>
             At AnyaDaan, our mission is to bridge the gap between surplus and scarcity. We empower communities by connecting food donors with organizations that serve those in need.
-
-Through technology, compassion, and collaboration, we aim to reduce food waste and ensure every meal reaches the right plate.
+            Through technology, compassion, and collaboration, we aim to reduce food waste and ensure every meal reaches the right plate.
           </p>
 
           <div className="cta-buttons">
-            <Link to='/about'><button className="btn primary">Learn More</button></Link>
+            <Link to='/about' onClick={() => window.scrollTo(0, 0)}><button className="btn primary">Learn More</button></Link>
           </div>
         </div>
       </div>

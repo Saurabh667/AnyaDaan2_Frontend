@@ -7,6 +7,7 @@ const RecentDonations = () => {
   const [donations, setDonations] = useState([]);
   const [acceptingId, setAcceptingId] = useState(null);
   const [submitMessage, setSubmitMessage] = useState("");
+  const [loading,setLoading]=useState(false);
 
 
 
@@ -52,6 +53,13 @@ const RecentDonations = () => {
   //       }
   //     });
   // };
+  const getMapLink = (item) => {
+    if (item.latitude && item.longitude) {
+    return `https://www.google.com/maps?q=${item.latitude},${item.longitude}`;
+    }
+    const address = `${item.addres}, ${item.city}, ${item.pincode}`;
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+  };
   const handleAcceptClick = (id) => {
     const token = localStorage.getItem("accessToken");
     if (!token) {
@@ -63,12 +71,13 @@ const RecentDonations = () => {
   };
   const handleAcceptSubmit = (e, id) => {
     e.preventDefault();
-
     const token = localStorage.getItem("accessToken");
     if (!token) {
       alert("Please log in again.");
       return;
     }
+
+    setLoading(true)
 
     axios
       .patch(
@@ -91,6 +100,8 @@ const RecentDonations = () => {
         console.error(err);
         alert("Failed to accept donation.");
       });
+    setLoading(false)
+      
   };
 
 
@@ -121,10 +132,20 @@ const RecentDonations = () => {
               <p><b>Type:</b> {item.contributionType}</p>
               <p><b>Description:</b> {item.description}</p>
               <p><b>Message:</b> {item.message}</p>
-
+              <p>
+                <b>Address:</b> {item.addres}, {item.city} - {item.pincode}
+              </p>
               <p className="time">
                 ⏰ {new Date(item.created_at).toLocaleString()}
               </p>
+              <a
+                href={getMapLink(item)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="map-btn"
+              >
+                📍 View on Map
+              </a>
 
               <div className="action-buttons">
                 {/* <button
@@ -154,7 +175,8 @@ const RecentDonations = () => {
                       />
 
                       <div className="Mform-actions">
-                        <button type="submit">Send & Accept</button>
+                        {loading?(<button type="submit">Sending..</button>):(<button type="submit">Send & Accept</button>)}
+                        
                         <button
                           type="button"
                           className="cancel-btn"

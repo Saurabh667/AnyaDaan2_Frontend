@@ -1,6 +1,15 @@
 import React from 'react'
 import './Footer.css'
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagram,
+  faLinkedin,
+  faTwitter
+} from "@fortawesome/free-brands-svg-icons";
+
+
 
 const Footer = () => {
   return (
@@ -34,10 +43,11 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Connect With Us</h4>
             <div className="socials">
-              <span>✉️</span>
-              <span>📷</span>
-              <span>💼</span>
-              <span>🐦</span>
+              <span><FontAwesomeIcon icon={faInstagram} /></span>
+              <span><FontAwesomeIcon icon={faLinkedin} /></span>
+              <span><FontAwesomeIcon icon={faTwitter} /></span>
+              <span><FontAwesomeIcon icon={faEnvelope} /></span>
+              
             </div>
           </div>
         </div>

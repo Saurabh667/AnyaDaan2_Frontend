@@ -1,4 +1,6 @@
-
+*{
+  scroll-behavior: smooth;
+}
 .about-page {
   width: 100%;
   font-family: "Segoe UI", sans-serif;

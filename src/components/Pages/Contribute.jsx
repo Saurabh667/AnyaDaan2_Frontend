@@ -9,17 +9,43 @@ const Contribute = () => {
   const [name,setName]=useState('');
   const [email,setEmail]=useState('');
   const [contributionType, setContributionType] = useState("");
+  const [addres,setAddres]=useState("");
+  const [city,setCity]=useState("");
+  const [pincode,setPincode]=useState("")
   const [description,setDescription]=useState('');
   const [message,setMessage]=useState('');
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
   const [image, setImage] = useState(null);
   const [loading,setLoading]=useState(false);
+  const [cordinates,setCordinates]=useState(false);
   const navigate = useNavigate();
+
+  const getCurrentLocation = () => {
+  if (!navigator.geolocation) {
+    alert("Geolocation not supported");
+    return;
+  }
+  
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      setLatitude(position.coords.latitude);
+      setLongitude(position.coords.longitude);
+      setCordinates(true);
+    },
+
+    () => {
+      alert("Location permission denied");
+
+    }
+  );
+};
 
   const handleSubmit=async (e)=>{
     e.preventDefault()
     setLoading(true)
     const contributionData={
-        name,email,contributionType,imageName,description,message
+        name,email,contributionType,imageName,description,message,addres,city,pincode,latitude,longitude
         };
   console.log(contributionData);
   try{
@@ -92,9 +118,23 @@ const Contribute = () => {
           <textarea placeholder="Write the description of donation..." onChange={(e)=> setDescription(e.target.value)}></textarea>
         </div>
         <div className="form-group">
+          <label>Addres</label>
+          <input type="text" placeholder="Enter pickup location" onChange={(e)=>setAddres(e.target.value)}/>
+        </div>
+        <div className="form-group">
+          <label>City</label>
+          <input type="text" placeholder="Enter city" onChange={(e)=>setCity(e.target.value)}/>
+        </div>
+        <div className="form-group">
+          <label>Pincode</label>
+          <input type="number" placeholder="Enter pincode" onChange={(e)=>setPincode(e.target.value)}/>
+        </div>
+        <div className="form-group">
           <label>Message</label>
           <textarea placeholder="Write a short message..." onChange={(e)=>setMessage(e.target.value)}></textarea>
         </div>
+        {/* <button type="button" className="submit-btn location" onClick={getCurrentLocation}>📍 Use Current Location</button> */}
+        {cordinates?(<button type="button" className="submit-btn location" onClick={getCurrentLocation} disabled={true}>Location stored</button>):<button type="button" className="submit-btn location" onClick={getCurrentLocation}>📍 Use Current Location</button>}
               {loading?(<button className="submit-btn" type="submit" disabled={true} >Please Wait....</button>):(<button className="submit-btn" type="submit" >Submit Contribution</button>)}
         
       </div>
