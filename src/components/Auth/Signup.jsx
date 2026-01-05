@@ -5,6 +5,7 @@ import "./Signup.css";
 
 export default function Signup() {
   const [errors,setErrors]=useState({})
+  
 
   const [formData, setFormData] = useState({
     companyName: "",
@@ -28,10 +29,10 @@ export default function Signup() {
     console.log(formData)
 
     try {
-      const response=await axios.post("http://127.0.0.1:8000/api/signup/", formData);
+      const response=await axios.post("https://anyadaan2-backend-1.onrender.com/api/signup/", formData);
       console.log(response.data)
       setErrors({})
-      await fetch("http://127.0.0.1:8000/api/sendEmail/", {
+      await fetch("https://anyadaan2-backend-1.onrender.com/api/sendEmail/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: formData.email }),
@@ -42,6 +43,8 @@ export default function Signup() {
     } catch (error) {
       // console.error("Signup error:", error);
       console.error("Signup error:", error.response.data);
+      console.error(error);
+      alert("Signup failed or email service error");
       setErrors(error.response.data);
       alert("Signup failed!");
     }

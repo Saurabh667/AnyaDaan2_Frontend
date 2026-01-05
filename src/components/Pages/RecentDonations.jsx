@@ -17,42 +17,11 @@ const RecentDonations = () => {
 
   const fetchDonations = () => {
     axios
-      .get("http://127.0.0.1:8000/api/donations/recent/")
+      .get("https://anyadaan2-backend-1.onrender.com/api/donations/recent/")
       .then((res) => setDonations(res.data))
       .catch((err) => console.error(err));
   };
   
-  //   const handleAccept = (id) => {
-  //   const token = localStorage.getItem("accessToken");
-  //   if (!token) {
-  //     alert("Please log in to accept contributions.");
-  //     return;
-  //   }
-
-  //   axios
-  //     .patch(
-  //       `http://127.0.0.1:8000/api/donations/${id}/accept/`,
-  //       {},
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       }
-  //     )
-  //     .then(() => {
-  //       fetchDonations();
-  //     })
-  //     .catch((err) => { 
-  //       console.error(err);
-  //       if (err.response?.status === 401) {
-  //         alert("Unauthorized. Please log in again.");
-  //       } else if (err.response?.status === 403) {
-  //         alert("Forbidden. You do not have permission to accept this donation.");
-  //       } else {
-  //         alert("An error occurred. Please try again.");
-  //       }
-  //     });
-  // };
   const getMapLink = (item) => {
     if (item.latitude && item.longitude) {
     return `https://www.google.com/maps?q=${item.latitude},${item.longitude}`;
@@ -81,7 +50,7 @@ const RecentDonations = () => {
 
     axios
       .patch(
-        `http://127.0.0.1:8000/api/donations/${id}/accept/`,
+        `https://anyadaan2-backend-1.onrender.com/api/donations/${id}/accept/`,
         {
           message_to_donor: submitMessage,
         },

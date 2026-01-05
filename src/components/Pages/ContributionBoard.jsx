@@ -8,7 +8,7 @@ const ContributionBoard = () => {
 
   const fetchBoard = () => {
     axios
-      .get("http://127.0.0.1:8000/api/contributions/board")
+      .get("https://anyadaan2-backend-1.onrender.com/api/contributions/board")
       .then((res) => setBoard(res.data))
       .catch((err) => console.error(err));
   };
