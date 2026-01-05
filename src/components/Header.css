@@ -88,13 +88,13 @@
 .auth-buttons .btn{
   margin-top: 0px;
 }
-.btn {
+.Hbtn {
   height: 42px;
   padding: 0 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 13px;
   font-family: "Poppins", sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
@@ -104,6 +104,7 @@
 }
 
 .btn-login {
+  padding: 5px 12px;
   border: 1.5px solid #16a34a;
   color: #16a34a;
   background: transparent;
@@ -114,6 +115,7 @@
 }
 
 .btn-signup {
+  padding: 5px 12px;
   background-color: #16a34a;
   color: #ffffff;
   border: 1.5px solid #16a34a;
@@ -162,10 +164,16 @@
     gap: 10px;
   }
 
-  .btn {
+  .Hbtn {
     height: 38px;
     padding: 0 14px;
     font-size: 0.85rem;
+  }
+  .btn-login{
+    padding: 7px 12px;
+  }
+  .btn-signup{
+    padding: 7px 12px;
   }
 }
 

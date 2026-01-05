@@ -33,13 +33,13 @@ const Header = () => {
       </div>
       <div className="auth-buttons">
         {
-          isLoggedIn ? (<button onClick={handleLogout} className="btn logoutBtn">Logout</button>):(
+          isLoggedIn ? (<button onClick={handleLogout} className="Hbtn logoutBtn">Logout</button>):(
         <>
-        <Link to="/login" className="btn btn-login">
+        <Link to="/login" className="Hbtn btn-login">
         Login
       </Link>
 
-      <Link to="/signup" className="btn btn-signup">
+      <Link to="/signup" className="Hbtn btn-signup">
         Signup
       </Link>
       </>
