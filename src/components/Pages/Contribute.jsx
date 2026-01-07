@@ -223,9 +223,9 @@ const Contribute = () => {
               </div>
             )}
 
-            {contributionType !=="Money Donation" && (
+            {contributionType !== "Money Donation" && (
               <>
-{cordinates ? (<button type="button" className="submit-btn location" onClick={getCurrentLocation} disabled={true}>Location stored</button>) : <button type="button" className="submit-btn location" onClick={getCurrentLocation}>📍 Use Current Location</button>}
+                {cordinates ? (<button type="button" className="submit-btn location" onClick={getCurrentLocation} disabled={true}>Location stored</button>) : <button type="button" className="submit-btn location" onClick={getCurrentLocation}>📍 Use Current Location</button>}
               </>
             )}
 

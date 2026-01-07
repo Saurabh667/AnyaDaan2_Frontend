@@ -4,8 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Signup.css";
 
 export default function Signup() {
-  const [errors,setErrors]=useState({})
-  
+  const [errors,setErrors]=useState({});
+  const [loading,setLoading]=useState(false);
 
   const [formData, setFormData] = useState({
     companyName: "",
@@ -26,6 +26,7 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true)
     console.log(formData)
 
     try {
@@ -47,6 +48,9 @@ export default function Signup() {
       alert("Signup failed or email service error");
       setErrors(error.response.data);
       alert("Signup failed!");
+    }
+    finally{
+      setLoading(false)
     }
   };
 
@@ -154,10 +158,29 @@ export default function Signup() {
               required
             />
           </div>
-
+{/* 
           <button type="submit" className="btn">
             Create Account
-          </button>
+          </button> */}
+          {loading?(<button type="submit" className="btn">
+            
+<div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
+    <div class="bar7"></div>
+    <div class="bar8"></div>
+    <div class="bar9"></div>
+    <div class="bar10"></div>
+    <div class="bar11"></div>
+    <div class="bar12"></div>
+</div>
+          </button>):(<button type="submit" className="btn">
+            Create Account
+          </button>)}
 
           <p className="login-text">
             Already have an account? <Link to="/login">Log in</Link>

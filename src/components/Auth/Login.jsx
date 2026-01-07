@@ -9,6 +9,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [loading,setLoading]=useState(false);
   const {isLoggedIn,setIsLoggedIn}=useContext(AuthContext);
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
@@ -20,7 +21,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true)
     try {
     //   const response = await fetch("http://127.0.0.1:8000/api/login/", {
     //     method: "POST",
@@ -65,6 +66,9 @@ const Login = () => {
       console.error(error.response?.data || error, 'invalid credentials');
       setErrors(error.response?.data || { detail: 'Login failed' });
     }
+    finally{
+      setLoading(false)
+    }
   };
 
   return (
@@ -95,10 +99,29 @@ const Login = () => {
             required
           />
         </div>
-
+{/* 
         <button type="submit" className="login-btn">
           Login
-        </button>
+        </button> */}
+        {loading?(<button type="submit" className="login-btn">
+                
+<div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
+    <div class="bar7"></div>
+    <div class="bar8"></div>
+    <div class="bar9"></div>
+    <div class="bar10"></div>
+    <div class="bar11"></div>
+    <div class="bar12"></div>
+</div>
+        </button>):(<button type="submit" className="login-btn">
+          Login
+        </button>)}
 
         {message && <p className="message">{message}</p>}
 
