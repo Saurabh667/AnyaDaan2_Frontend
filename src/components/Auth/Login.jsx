@@ -56,7 +56,7 @@ const Login = () => {
 
     if (backendMessage?.includes("No active account")) {
       // alert("No account exists. Please sign up.");
-      setMessage("No account exists. Please sign up.")
+      setMessage("Incorrect email or password.")
     } else if (backendMessage?.includes("credentials")) {
       // alert("Incorrect email or password.");
       setMessage("Incorrect email or password.")
