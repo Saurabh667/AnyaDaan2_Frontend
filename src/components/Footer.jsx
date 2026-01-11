@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Connect With Us</h4>
             <div className="socials">
-              <span><FontAwesomeIcon icon={faInstagram} /></span>
+              <a href="https://www.instagram.com/anyadaan/" target='blank'><span><FontAwesomeIcon icon={faInstagram} /></span></a>
               <span><FontAwesomeIcon icon={faLinkedin} /></span>
               <span><FontAwesomeIcon icon={faTwitter} /></span>
               <span><FontAwesomeIcon icon={faEnvelope} /></span>

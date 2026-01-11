@@ -61,6 +61,10 @@
   display: flex;
   gap: 16px;
 }
+.socials a{
+  text-decoration: none;
+  color: #ffffff;
+}
 
 .socials span {
   width: 51px;
