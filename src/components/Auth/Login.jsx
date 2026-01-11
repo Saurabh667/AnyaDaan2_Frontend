@@ -32,7 +32,7 @@ const Login = () => {
   username: formData.email,
   password: formData.password
 })
-      // console.log(response.data)
+      console.log(response.data)
       localStorage.setItem('accessToken', response.data.access)
       localStorage.setItem('refreshToken', response.data.refresh)
       // console.log('login successful')
@@ -52,16 +52,17 @@ const Login = () => {
     //   }
     } catch (error) {
       const backendMessage = error?.response?.data?.detail;
+      // console.log("sfdsdfsdf",backendMessage)
 
-    if (backendMessage === "No active account found or incorrect password.") {
+    if (backendMessage?.includes("No active account")) {
       // alert("No account exists. Please sign up.");
       setMessage("No account exists. Please sign up.")
-    } else if (backendMessage === "Invalid credentials") {
+    } else if (backendMessage?.includes("credentials")) {
       // alert("Incorrect email or password.");
       setMessage("Incorrect email or password.")
     } else {
       alert("Login failed. Please try again.");
-      setMessage("⚠️ Network error. Please try again.");
+      setMessage("Login failed. Please try again.");
     }
       console.error(error.response?.data || error, 'invalid credentials');
       setErrors(error.response?.data || { detail: 'Login failed' });
