@@ -25,7 +25,7 @@ const ContributionBoard = () => {
   return (<>
     <div className="CBpage">
       <div className="CBboard-page">
-        <h2>TEAM LEADERBOARD</h2>
+        <h2>DONOR'S LEADERBOARD</h2>
 
         {/* ========= TOP 3 CONTRIBUTORS ========= */}
         <div className="CBtop3">
