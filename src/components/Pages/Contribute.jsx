@@ -55,7 +55,7 @@ const Contribute = () => {
       const { order_id, amount: orderAmount } = res.data;
 
       const options = {
-        key: "rzp_test_RzJUwqEpIJvC9a",
+        key: "rzp_test_S2YNh8fj9oJuac",
         amount: orderAmount,
         currency: "INR",
         name: "AnyaDaan",
