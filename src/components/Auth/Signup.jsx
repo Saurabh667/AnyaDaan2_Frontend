@@ -27,24 +27,24 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
-    console.log(formData)
+    // console.log(formData)
 
     try {
       const response=await axios.post("https://anyadaan2-backend-1.onrender.com/api/signup/", formData);
-      console.log(response.data)
+      // console.log(response.data)
       setErrors({})
       await fetch("https://anyadaan2-backend-1.onrender.com/api/sendEmail/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: formData.email }),
       });
-      console.log('data send to backend')
+      // console.log('data send to backend')
       alert("Signup successful!");
       navigate("/login");
     } catch (error) {
       // console.error("Signup error:", error);
       console.error("Signup error:", error.response.data);
-      console.error(error);
+      // console.error(error);
       alert("Signup failed or email service error");
       setErrors(error.response.data);
       alert("Signup failed!");

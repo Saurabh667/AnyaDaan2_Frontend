@@ -14,7 +14,7 @@ const Header = () => {
         localStorage.removeItem('username');
         setIsLoggedIn(false);
         // navigate('/login');
-        console.log('logged out successfully')
+        // console.log('logged out successfully')
     }
   return (
     <>

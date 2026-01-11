@@ -3,8 +3,15 @@ import './Home.css'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
 import bg from '../assets/bg-image-ad.jpg'
+import {AuthContext} from '../AuthProvider';
+import { useContext } from 'react';
+import donateImg from '../assets/donationMessageImg.jpg'
+
 
 const Home = () => {
+  
+  const {isLoggedIn,setIsLoggedIn,user}=useContext(AuthContext);
+
   return (
     <>
     <div
@@ -133,7 +140,8 @@ const Home = () => {
         
         <div className="cta-image">
           <img
-            src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=80"
+            // src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=80"
+            src="https://www.sata.com.sg/wp-content/uploads/2019/11/SATA-Donation-1.jpg"
             alt="Food donation"
           />
         </div>
@@ -149,7 +157,7 @@ const Home = () => {
           </p>
 
           <div className="cta-buttons">
-            <button className="btn primary"><Link to='/contribute' onClick={() => window.scrollTo(0, 0)}>Donate Food</Link></button>
+            <button className="btn primary"><Link to='/contribute' onClick={() => window.scrollTo(0, 0)}>Donate</Link></button>
             <button className="btn outline"><Link to="/contributionBoard" onClick={() => window.scrollTo(0, 0)}>Top Donor's</Link></button>
           </div>
         </div>
@@ -194,7 +202,8 @@ const Home = () => {
 
         <div className="mission-buttons">
           {/* <button className="btn light" >Sign Up Now</button> */}
-          <Link to="/signup" className='btn light'>SignUp</Link>
+          {isLoggedIn ? (<></>):(<Link to="/signup" className='btn light'>SignUp</Link>)}
+          
 
           <button className="btn outline-light"><Link to='/contribute'>Donate Today</Link></button>
         </div>

@@ -32,10 +32,10 @@ const Login = () => {
   username: formData.email,
   password: formData.password
 })
-      console.log(response.data)
+      // console.log(response.data)
       localStorage.setItem('accessToken', response.data.access)
       localStorage.setItem('refreshToken', response.data.refresh)
-      console.log('login successful')
+      // console.log('login successful')
       setIsLoggedIn(true)
       setErrors({})
       navigate('/')
