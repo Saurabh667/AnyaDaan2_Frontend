@@ -91,7 +91,7 @@ const Home = () => {
         </div>
       </div>
     </section>
-    <section className="impact">
+    {/* <section className="impact">
       <h2 className="impact-title">
         Our <span>Impact</span>
       </h2>
@@ -133,7 +133,7 @@ const Home = () => {
           <p className="label">NGOs Partnered</p>
         </div>
       </div>
-    </section>
+    </section> */}
 
     <section className="cta">
       <div className="cta-container">
