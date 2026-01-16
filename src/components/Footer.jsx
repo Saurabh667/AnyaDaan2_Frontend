@@ -14,9 +14,9 @@ import {
 const Footer = () => {
   return (
     <>
-    <footer className="footer">
+      <footer className="footer">
         <div className="footer-content">
-          
+
           <div className="footer-col">
             <h3>AnyaDaan</h3>
             <p>
@@ -25,18 +25,26 @@ const Footer = () => {
             </p>
           </div>
 
-          
+
           <div className="footer-col">
             <h4>Quick Links</h4>
-            <ul>
-              <li><Link to='/' onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
-              <li><Link to='/about' onClick={() => window.scrollTo(0, 0)}>About</Link></li>
-              <li><Link to='/contribute' onClick={() => window.scrollTo(0, 0)}>Contribute</Link></li>
-              <li><Link to='/recentDonations' onClick={() => window.scrollTo(0, 0)}>Donations</Link></li>
-              <li><Link to='/contributionBoard' onClick={() => window.scrollTo(0, 0)}>LeadersBoard</Link></li>
-              
-              <li>Contact</li>
-            </ul>
+            <div className="mainFooterDiv">
+              <div className="div1">
+                <ul>
+                  <li><Link to='/' onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
+                  <li><Link to='/about' onClick={() => window.scrollTo(0, 0)}>About</Link></li>
+                  <li><Link to='/contribute' onClick={() => window.scrollTo(0, 0)}>Contribute</Link></li>
+                  
+                </ul>
+              </div>
+              <div className="div2">
+                <ul>
+                  <li><Link to='/recentDonations' onClick={() => window.scrollTo(0, 0)}>Donations</Link></li>
+                  <li><Link to='/contributionBoard' onClick={() => window.scrollTo(0, 0)}>LeadersBoard</Link></li>
+                  <li>Contact</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Social */}
@@ -47,7 +55,7 @@ const Footer = () => {
               <span><FontAwesomeIcon icon={faLinkedin} /></span>
               <span><FontAwesomeIcon icon={faTwitter} /></span>
               <span><FontAwesomeIcon icon={faEnvelope} /></span>
-              
+
             </div>
           </div>
         </div>
