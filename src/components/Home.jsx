@@ -94,7 +94,7 @@ const Home = () => {
         {faq ? (<div className="chatArea">
           <button className="closeBtn" onClick={() => setFaq(false)}>X</button>
           <div className="messages">
-            <div className="message-bubble greenBg">
+            <div className="message-bubbleV">
               Hello!
               here You can ask your query
             </div>
