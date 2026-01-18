@@ -156,10 +156,11 @@
 }
 @media (max-width: 768px){
   .openBtn{
-    margin-left: 79vw;
+    margin-left: 75vw;
   }
   .chatArea{
-    margin-left: 7vw;
+    margin-left: 3vw;
+    margin-top: 25vh;
     opacity: .9;
   }
 }
