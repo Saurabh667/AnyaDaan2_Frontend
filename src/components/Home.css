@@ -155,13 +155,17 @@
   border: 1px solid #ddd;
 }
 @media (max-width: 768px){
+  .chatBox{
+    z-index: 999;
+  }
   .openBtn{
     margin-left: 75vw;
   }
   .chatArea{
     margin-left: 3vw;
     margin-top: 25vh;
-    opacity: .9;
+    opacity: 0.9;
+    
   }
 }
 
