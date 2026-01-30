@@ -189,6 +189,7 @@ const Home = () => {
         </div>
 
       </section>
+      
       {/* <section className="impact">
       <h2 className="impact-title">
         Our <span>Impact</span>
