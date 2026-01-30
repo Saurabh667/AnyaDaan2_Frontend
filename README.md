@@ -1,16 +1,94 @@
-# React + Vite
+# 🌱 Anyadaan — Smart Donation Platform for a Better Tomorrow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Anyadaan** is a next-generation donation and welfare coordination platform designed to make **food and money donations transparent, fast, and impactful**.
 
-Currently, two official plugins are available:
+Our mission is simple:  
+> *No food should be wasted, and no help should be delayed.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌍 The Problem
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Tons of **food gets wasted daily**
+- NGOs and volunteers **don’t get real-time donation updates**
+- Donors **don’t know where their help actually goes**
+- Existing systems lack **transparency and coordination**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💡 The Solution: Anyadaan
+
+Anyadaan bridges the gap between **Donors**, **NGOs**, and **Volunteers** through a smart, real-time platform.
+
+✨ Donate  
+📍 Match  
+📩 Notify  
+🤝 Deliver  
+
+All in one seamless flow.
+
+---
+
+## 🚀 Key Features
+
+### 👥 Multi-Role System
+- **Donor** – Donate food or money
+- **NGO / Volunteer** – Accept and distribute donations
+- **Admin** – Monitor and manage platform activity
+
+### 🍲 Food Donation Workflow
+1. Donor lists food with quantity & location
+2. Nearby NGOs/volunteers receive instant email alerts
+3. First acceptor gets donor details
+4. Donation is marked as **completed with full traceability**
+
+### 💸 Monetary Donations
+- Secure donation flow
+- Direct NGO support
+- Transparent records
+
+### 📧 Smart Notifications
+- Email alerts for new donations
+- Acceptance confirmation for donors
+- Real-time status updates
+
+### 🗺️ Location-Based Matching *(Planned)*
+- Smart NGO/volunteer matching based on distance
+- Faster pickups, less waste
+
+---
+
+## 🧠 Vision (Imaginary but Achievable)
+
+- 🧠 AI-powered donation matching
+- 📊 Impact analytics dashboard
+- 📱 Mobile app for volunteers
+- 🔗 Government & NGO integrations
+- 🏙️ City-wise welfare heatmaps
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Tailwind CSS
+- EmailJS
+
+### Backend
+- Python (Flask)
+- REST APIs
+- Authentication & role management
+
+### Database
+- PostgreSQL / MongoDB
+
+### Cloud & Tools
+- Cloudinary (image storage)
+- Vercel / Render (deployment)
+- GitHub Actions (CI/CD – planned)
+
+---
+
+## 📂 Project Structure
+
