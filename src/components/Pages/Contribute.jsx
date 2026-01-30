@@ -16,7 +16,7 @@ const Contribute = () => {
   const [message, setMessage] = useState('');
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
   const [cordinates, setCordinates] = useState(false);
   const [amount, setAmount] = useState("");
@@ -118,7 +118,7 @@ const Contribute = () => {
     else {
       setLoading(true)
       const contributionData = {
-        name, email, contributionType, imageName, image, description, message, addres, city, pincode, latitude, longitude
+        name, email, contributionType, imageName, description, message, addres, city, pincode, latitude, longitude
       };
       console.log(contributionData);
       try {
@@ -179,7 +179,7 @@ const Contribute = () => {
                     accept="image/*"
                     onChange={(e) => {
                       setImageName(e.target.files[0]?.name || "");
-                      setImage(e.target.files[0]);
+                      // setImage(e.target.files[0]);
                     }
                     }
                   //   onChange={(e)=> setImage(e.target.files[0])}
