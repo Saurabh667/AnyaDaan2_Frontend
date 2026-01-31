@@ -16,7 +16,7 @@ const Home = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [loading,setLoading]=useState(false);
+  const [loading, setLoading] = useState(false);
 
   const suggestedQuestions = [
     "How can I donate food on AnyaDaan",
@@ -50,7 +50,7 @@ const Home = () => {
     } catch (error) {
       setMessages(prev => [...prev, { sender: "bot", text: "Server not responding" }]);
     }
-    finally{
+    finally {
       setLoading(false)
     }
     setInput("");
@@ -66,8 +66,8 @@ const Home = () => {
 
         <div className="hero-overlay" ></div>
 
-
         <div className="hero-content">
+
           <h1 className="hero-title">
             Together, Let’s <span>End Food Waste</span>
           </h1>
@@ -112,14 +112,14 @@ const Home = () => {
           </div>
 
           <form action="" onSubmit={handleFaq} >
-            {loading?(<input className='inputQ' disabled/>):(<><input type="text" placeholder="Ask anything you want?" className='inputQ' value={input}
+            {loading ? (<input className='inputQ' disabled />) : (<><input type="text" placeholder="Ask anything you want?" className='inputQ' value={input}
               onChange={(e) => setInput(e.target.value)}
               onFocus={() => setShowSuggestions(true)}
               onBlur={() => {
 
                 setTimeout(() => setShowSuggestions(false), 150);
               }} /></>)}
-            
+
             {showSuggestions && input.length === 0 && (
               <div className="suggestionsBox">
                 {suggestedQuestions.map((q, index) => (
@@ -189,7 +189,7 @@ const Home = () => {
         </div>
 
       </section>
-      
+
       {/* <section className="impact">
       <h2 className="impact-title">
         Our <span>Impact</span>
@@ -314,4 +314,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

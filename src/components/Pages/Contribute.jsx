@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./Contribute.css";
 import Footer from "../Footer";
 import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios";
+import { AuthContext } from "../../AuthProvider";
 
 const Contribute = () => {
   const [imageName, setImageName] = useState("");
@@ -21,6 +22,17 @@ const Contribute = () => {
   const [cordinates, setCordinates] = useState(false);
   const [amount, setAmount] = useState("");
   const navigate = useNavigate();
+
+  const { isLoggedIn, user } = useContext(AuthContext);
+  // console.log("isLoggedIn:", isLoggedIn);
+// console.log("user:", user);
+
+useEffect(() => {
+  const storedEmail = localStorage.getItem("loggedEmail");
+  if (storedEmail) {
+    setEmail(storedEmail);
+  }
+}, []);
 
   const getCurrentLocation = () => {
     if (!navigator.geolocation) {
@@ -150,12 +162,13 @@ const Contribute = () => {
             <h2>Contribute Now</h2>
             <div className="form-group">
               <label>Full Name</label>
-              <input type="text" placeholder="Enter your name" onChange={(e) => setName(e.target.value)} />
+              <input type="text" placeholder="Enter your name"  onChange={(e) => setName(e.target.value)} />
             </div>
 
             <div className="form-group">
               <label>Email</label>
-              <input type="email" placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)} />
+              <input type="email" placeholder="Enter your email" value={email}   readOnly={!!localStorage.getItem("loggedEmail")} // optional
+ onChange={(e) => setEmail(e.target.value)} />
             </div>
 
             <div className="form-group">

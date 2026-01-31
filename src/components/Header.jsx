@@ -12,6 +12,7 @@ const Header = () => {
         localStorage.removeItem('accessToken');
         localStorage.removeItem('refreshToken');
         localStorage.removeItem('username');
+        localStorage.removeItem('loggedEmail');
         setIsLoggedIn(false);
         // navigate('/login');
         // console.log('logged out successfully')
