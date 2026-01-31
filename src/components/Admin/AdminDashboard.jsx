@@ -13,7 +13,6 @@ const AdminDashboard = () => {
       setError("Admin login required");
       return;
     }
-
     axios
       .get("http://127.0.0.1:8000/api/admin/contributions/", {
         headers: {

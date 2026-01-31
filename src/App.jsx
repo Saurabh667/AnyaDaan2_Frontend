@@ -13,6 +13,7 @@ import ContributionBoard from "./components/Pages/ContributionBoard";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import { useContext } from "react";
 import './App.css'
+import VerifiedNgo from "./components/Admin/VerifiedNgo";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/recentDonations" element={<RecentDonations/>}/>
           <Route path="/contributionBoard" element={<ContributionBoard/>}/>
           <Route path="/admin" element={<AdminDashboard/>}/>
+          <Route path="/verifiedngo" element={<VerifiedNgo/>}/>
           
         </Routes>
       

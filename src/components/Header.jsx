@@ -29,6 +29,7 @@ const Header = () => {
           <li><a href="/contributionBoard">LeadersBoard</a></li>
           <li><a href="/recentDonations">Donations</a></li>
           <li><a href="/about">About</a></li>
+          <li><a href="/verifiedngo">Verified NGO's</a></li>
         </ul>
       </div>
       <div className="auth-buttons">
@@ -52,4 +53,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;

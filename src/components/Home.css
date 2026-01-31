@@ -162,9 +162,9 @@
   border: 1px solid #ddd;
 }
 @media (max-width: 768px){
-  .chatBox{
+  /* .chatBox{
     z-index: 999;
-  }
+  } */
   .openBtn{
     margin-left: 75vw;
   }

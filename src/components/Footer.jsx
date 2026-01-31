@@ -41,7 +41,7 @@ const Footer = () => {
                 <ul>
                   <li><Link to='/recentDonations' onClick={() => window.scrollTo(0, 0)}>Donations</Link></li>
                   <li><Link to='/contributionBoard' onClick={() => window.scrollTo(0, 0)}>LeadersBoard</Link></li>
-                  <li>Contact</li>
+                  <li><Link to='/verifiedngo' onClick={() => window.scrollTo(0, 0)}>Verified NGO's</Link></li>
                 </ul>
               </div>
             </div>

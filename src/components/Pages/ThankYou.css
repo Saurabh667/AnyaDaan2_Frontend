@@ -79,7 +79,7 @@
 }
 
 .primary-btn:hover {
-  background: #4f46e5;
+  background: #46e561;
   transform: translateY(-2px);
 }
 
@@ -89,7 +89,7 @@
 }
 
 .secondary-btn:hover {
-  background: #6366f1;
+  background: #15bd2e;
   color: #ffffff;
   transform: translateY(-2px);
 }
