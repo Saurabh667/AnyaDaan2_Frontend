@@ -61,6 +61,8 @@
 .socials {
   display: flex;
   gap: 16px;
+  position: relative;
+  z-index: 1;
 }
 .socials a{
   text-decoration: none;
@@ -102,6 +104,8 @@
 .mainFooterDiv{
   display: flex;
   /* justify-content: center; */
+  position: relative;
+  z-index: 1;
 }
 .div1{
   margin-right: 10px;
