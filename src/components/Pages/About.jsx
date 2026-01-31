@@ -76,6 +76,50 @@ const About = () => {
         </div>
       </div>
     </div>
+    <section className="impact">
+      <h2 className="impact-title">
+        Our <span>Impact</span>
+      </h2>
+
+      <p className="impact-subtitle">
+        Every number here represents a life touched, a meal served, and a positive change created.
+      </p>
+
+      <div className="impact-cards">
+        <div className="impact-card">
+          <div className="icon green">
+            🍴
+          </div>
+          <h3 className="number">1250+</h3>
+          <p className="label">Meals Served</p>
+        </div>
+
+        <div className="impact-card">
+          <div className="icon blue">
+            👥
+          </div>
+          <h3 className="number">85+</h3>
+          <p className="label">Volunteers</p>
+        </div>
+
+        <div className="impact-card">
+          <div className="icon yellow">
+            📍
+          </div>
+          <h3 className="number">5+</h3>
+          <p className="label">Cities Covered</p>
+        </div>
+
+        <div className="impact-card">
+          <div className="icon red">
+            🤝
+          </div>
+          <h3 className="number">20+</h3>
+          <p className="label">NGOs Partnered</p>
+        </div>
+      </div>
+    </section>
+
     <div className="team-section">
       <h2 className="team-title">Meet the Team</h2>
 
