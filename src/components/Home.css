@@ -165,13 +165,41 @@
   /* .chatBox{
     z-index: 999;
   } */
-  .openBtn{
+  /* .openBtn{
     margin-left: 75vw;
   }
   .chatArea{
     margin-left: 3vw;
     margin-top: 25vh;
     opacity: 0.9;
+  } */
+   .chatBox {
+    position: static;      /* 🔥 removes overlay */
+    height: auto;
+    width: auto;
+    inset: unset; /* ✅ prevent blocking hero */
+  }
+  .chatArea,
+  .openBtn {
+    pointer-events: auto; /* ✅ chat still works */
+  }
+   .chatArea {
+    position: fixed;
+    bottom: 80px;          /* ✅ stays above buttons */
+    left: 5vw;
+    right: 5vw;
+    width: 90vw;           /* ✅ full-width card */
+    height: 60vh;          /* ✅ not too tall */
+    margin: 0;
+    opacity: 0.95;
+    z-index: 1000;
+  }
+  .openBtn {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    margin: 0;
+    z-index: 1001;
   }
  
   
